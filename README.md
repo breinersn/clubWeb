@@ -1,1 +1,0 @@
-# club-speedy-web-dev
