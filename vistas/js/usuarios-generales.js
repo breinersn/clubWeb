@@ -251,9 +251,9 @@ $(".tablas").on("click", ".btnModalEditarPasajero", function(){
   }
 
   if (habilitadoMotoSpeedy) {
-    document.getElementById("editarMoto").checked = true;
+    document.getElementById("editarMotoPasajero").checked = true;
   }else{
-    document.getElementById("editarMoto").checked = false;
+    document.getElementById("editarMotoPasajero").checked = false;
   }
 
   if (habilitadoLider) {
@@ -295,14 +295,18 @@ $(".tablas").on("click", ".btnModalEditarPasajero", function(){
     var saldoMotoSpeedy = document.getElementById('editarSaldoMotoSpeedy').value;
     var saldoCarroSpeedy = document.getElementById('editarSaldoCarroSpeedy').value;
 
-    if (document.getElementById("editarMoto").checked == true) {
+    if (document.getElementById("editarMotoPasajero").checked == true) {
       var habilitadoMotoSpeedy = true;
+      var habilitadoTransportador = true;
+
     }else{
       var habilitadoMotoSpeedy = false;
     }
 
     if (document.getElementById("editarCarro").checked == true) {
        var habilitadoCarroSpeedy = true;
+       var habilitadoTransportador = true;
+
     }else{
       var habilitadoCarroSpeedy = false;
     }

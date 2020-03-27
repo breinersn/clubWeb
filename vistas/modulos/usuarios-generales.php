@@ -116,11 +116,18 @@
                     
               echo '<td>
 
-                <div class="btn-group">
+                <div class="btn-group">';
 
-                  <button class="btn btn-warning btnModalEditarPasajero" identificacion="'.$respuesta["usuarios"][$f]["identificacion"].'" nombres="'.$respuesta["usuarios"][$f]["nombres"].'" telefono="'.$respuesta["usuarios"][$f]["telefono"].'" email="'.$respuesta["usuarios"][$f]["email"].'" municipio="'.$respuesta["usuarios"][$f]["municipio"].'" password="'.$respuesta["usuarios"][$f]["password"].'" data-toggle="modal" data-target="#modalEditarPasajero"><i class="fa fa-pencil"></i></button>
+                if (isset($respuesta["usuarios"][$f]["placaMoto"])) {
 
-                  <button class="btn btn-danger btnEliminarPasajero" email="'.$respuesta["usuarios"][$f]["email"].'"><i class="fa fa-times"></i></button>
+                  echo '<button class="btn btn-warning btnModalEditarPasajero" identificacion="'.$respuesta["usuarios"][$f]["identificacion"].'" nombres="'.$respuesta["usuarios"][$f]["nombres"].'" telefono="'.$respuesta["usuarios"][$f]["telefono"].'" email="'.$respuesta["usuarios"][$f]["email"].'" municipio="'.$respuesta["usuarios"][$f]["municipio"].'" password="'.$respuesta["usuarios"][$f]["password"].'" saldoMotoSpeedy="'.$respuesta["usuarios"][$f]["saldoMotoSpeedy"].'" placaMoto="'.$respuesta["usuarios"][$f]["placaMoto"].'" codigoLider="'.$respuesta["usuarios"][$f]["codigoLider"].'" codigoPasajero="'.$respuesta["usuarios"][$f]["codigoPasajero"].'" codigoTransportador="'.$respuesta["usuarios"][$f]["codigoTransportador"].'" codigo1="'.$respuesta["usuarios"][$f]["codigo1"].'" cambioUsuario="'.$respuesta["usuarios"][$f]["cambioUsuario"].'" habilitadoPasajero="'.$respuesta["usuarios"][$f]["habilitadoPasajero"].'" habilitadoLider="'.$respuesta["usuarios"][$f]["habilitadoLider"].'" habilitadoTransportador="'.$respuesta["usuarios"][$f]["habilitadoTransportador"].'" habilitado="'.$respuesta["usuarios"][$f]["habilitado"].'" saldoCarroSpeedy="'.$respuesta["usuarios"][$f]["saldoMotoCarroSpeedy"].'" placaCarro="'.$respuesta["usuarios"][$f]["placaCarro"].'" habilitadoCarroSpeedy="'.$respuesta["usuarios"][$f]["habilitadoCarroSpeedy"].'" habilitadoMotoSpeedy="'.$respuesta["usuarios"][$f]["habilitadoMotoSpeedy"].'" habilitadoLider="'.$respuesta["usuarios"][$f]["habilitadoLider"].'" data-toggle="modal" data-target="#modalEditarPasajero"><i class="fa fa-pencil"></i></button>';
+
+                   }else{
+
+                    echo '<button class="btn btn-warning btnModalEditarPasajero" identificacion="'.$respuesta["usuarios"][$f]["identificacion"].'" nombres="'.$respuesta["usuarios"][$f]["nombres"].'" telefono="'.$respuesta["usuarios"][$f]["telefono"].'" email="'.$respuesta["usuarios"][$f]["email"].'" municipio="'.$respuesta["usuarios"][$f]["municipio"].'" password="'.$respuesta["usuarios"][$f]["password"].'" saldo="'.$respuesta["usuarios"][$f]["saldoMotoSpeedy"].'" codigoLider="'.$respuesta["usuarios"][$f]["codigoLider"].'" codigoPasajero="'.$respuesta["usuarios"][$f]["codigoPasajero"].'" codigoTransportador="'.$respuesta["usuarios"][$f]["codigoTransportador"].'" codigo1="'.$respuesta["usuarios"][$f]["codigo1"].'" cambioUsuario="'.$respuesta["usuarios"][$f]["cambioUsuario"].'" habilitadoPasajero="'.$respuesta["usuarios"][$f]["habilitadoPasajero"].'" habilitadoLider="'.$respuesta["usuarios"][$f]["habilitadoLider"].'" saldoCarroSpeedy="'.$respuesta["usuarios"][$f]["saldoMotoCarroSpeedy"].'" habilitadoTransportador="'.$respuesta["usuarios"][$f]["habilitadoTransportador"].'" habilitadoCarroSpeedy="'.$respuesta["usuarios"][$f]["habilitadoCarroSpeedy"].'" habilitadoMotoSpeedy="'.$respuesta["usuarios"][$f]["habilitadoMotoSpeedy"].'" data-toggle="modal" data-target="#modalEditarPasajero"><i class="fa fa-pencil"></i></button>';
+                  }
+
+                    echo '<button class="btn btn-danger btnEliminarPasajero" email="'.$respuesta["usuarios"][$f]["email"].'"><i class="fa fa-times"></i></button>
 
                 </div>  
 
@@ -261,52 +268,6 @@ MODAL AGREGAR CONTRATISTA
               </div>
 
             </div>
-
-            <!-- ENTRADA PARA CONFIRMAR LA CONTRASEÑA -->
-
-            <!-- <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
-
-                <input type="password" class="form-control input" name="nuevaConfirmarContraseña" id="nuevaConfirmarContraseña" placeholder="Confirmar Contraseña" required>
-
-              </div>
-
-            </div> -->
-
-            <!-- SELECCIONAR MUNICIPIO -->
-
-           <!--  <div class="form-group">
-                
-                <div class="input-group">
-                
-                  <span class="input-group-addon"><i class="fa fa-map"></i></span>
-
-                  <select class="form-control select2" style="width: 100%" name="municipioUserGeneral" id="municipioUserGeneral" required>
-
-                    <option>Seleccionar Municipios</option>
-
-                    <?php 
-
-                      $item = null;
-                      $valor = null;
-
-                      $municipios = ControladorSpeedys::ctrMostrarMunicipios($item, $valor);
-
-                      foreach ($municipios as $key => $value) {
-                        
-                        echo '<option value="'.$value["municipio"].'">'.$value["municipio"].'</option>';
-                      }
-
-                    ?>
-
-                  </select>
-                
-                </div>
-
-              </div> -->
               
                <!-- ENTRADA PARA FECHA Y HORA -->
             
@@ -500,7 +461,7 @@ MODAL EDITAR Pasajero
                   <span class="input-group">Habilitar Como MotoSpeedy</span>
                 </div>
                 <div class="col-xs-6">
-                  <input type="checkbox" name="editarMoto" id="editarMoto">
+                  <input type="checkbox" name="editarMotoPasajero" id="editarMotoPasajero">
                 </div> 
               </div>
             </span>
