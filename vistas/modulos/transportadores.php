@@ -262,6 +262,7 @@ MODAL AGREGAR TRANSPORTADOR
                     <option>BUCARAMANGA</option>
                     <option>CALI</option>
                     <option>TURBACO</option>
+                    <option>CARTAGENA</option>
 
                     <!-- <?php 
 
