@@ -74,6 +74,7 @@ function guardarTransportador() {
             telefono: telefono,
             codigo1: codigo1,
             codigoTransportador: codigoTransportador,
+            codigoPasajero: codigoTransportador,
             municipio: municipio,
             habilitadoTransportador: true,
             habilitadoMotoSpeedy: habilitadoMotoSpeedy,
@@ -320,10 +321,6 @@ $(".tablas").on("click", ".btnModalEditarTransportador", function() {
 
 
 /*=====  End of EDITAR TRANSPORTADOR  ======*/
-
-function formato(fecha) {
-    return fecha.replace(/^(\d{4})-(\d{2})-(\d{2})$/g, '$3/$2/$1');
-}
 
 /*=============================================
 =            REVISAR COMISION           =

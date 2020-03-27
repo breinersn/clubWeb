@@ -118,6 +118,7 @@
 
                     echo '<button class="btn btn-success btnTotalComision" email="'.$respuesta["usuarios"][$f]["email"].'"><i class="fa fa-money"></i></button>
                     <button class="btn btn-primary btnVerPagos" email="'.$respuesta["usuarios"][$f]["email"].'" nombres="'.$respuesta["usuarios"][$f]["nombres"].'"><i class="fa fa-usd"></i></button>
+                    <button class="btn btn-danger btnEliminarUsuario" email="'.$respuesta["usuarios"][$f]["email"].'"><i class="fa fa-times"></i></button>
 
                   </div>  
 
@@ -182,7 +183,7 @@ MODAL AGREGAR TRANSPORTADOR
               
                 <span class="input-group-addon"><i class="fa fa-user"></i></span> 
 
-                <input type="hidden" class="form-control input" name="nuevoSpeedy" id="nuevoSpeedy" placeholder="Ingresar nombre" required>
+                <input type="text" class="form-control input" name="nuevoSpeedy" id="nuevoSpeedy" placeholder="Ingresar nombre" required>
 
               </div>
 

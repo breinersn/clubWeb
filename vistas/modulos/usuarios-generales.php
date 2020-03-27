@@ -127,7 +127,7 @@
                     echo '<button class="btn btn-warning btnModalEditarPasajero" identificacion="'.$respuesta["usuarios"][$f]["identificacion"].'" nombres="'.$respuesta["usuarios"][$f]["nombres"].'" telefono="'.$respuesta["usuarios"][$f]["telefono"].'" email="'.$respuesta["usuarios"][$f]["email"].'" municipio="'.$respuesta["usuarios"][$f]["municipio"].'" password="'.$respuesta["usuarios"][$f]["password"].'" saldo="'.$respuesta["usuarios"][$f]["saldoMotoSpeedy"].'" codigoLider="'.$respuesta["usuarios"][$f]["codigoLider"].'" codigoPasajero="'.$respuesta["usuarios"][$f]["codigoPasajero"].'" codigoTransportador="'.$respuesta["usuarios"][$f]["codigoTransportador"].'" codigo1="'.$respuesta["usuarios"][$f]["codigo1"].'" cambioUsuario="'.$respuesta["usuarios"][$f]["cambioUsuario"].'" habilitadoPasajero="'.$respuesta["usuarios"][$f]["habilitadoPasajero"].'" habilitadoLider="'.$respuesta["usuarios"][$f]["habilitadoLider"].'" saldoCarroSpeedy="'.$respuesta["usuarios"][$f]["saldoMotoCarroSpeedy"].'" habilitadoTransportador="'.$respuesta["usuarios"][$f]["habilitadoTransportador"].'" habilitadoCarroSpeedy="'.$respuesta["usuarios"][$f]["habilitadoCarroSpeedy"].'" habilitadoMotoSpeedy="'.$respuesta["usuarios"][$f]["habilitadoMotoSpeedy"].'" data-toggle="modal" data-target="#modalEditarPasajero"><i class="fa fa-pencil"></i></button>';
                   }
 
-                    echo '<button class="btn btn-danger btnEliminarPasajero" email="'.$respuesta["usuarios"][$f]["email"].'"><i class="fa fa-times"></i></button>
+                    echo '<button class="btn btn-danger btnEliminarUsuario" email="'.$respuesta["usuarios"][$f]["email"].'"><i class="fa fa-times"></i></button>
 
                 </div>  
 

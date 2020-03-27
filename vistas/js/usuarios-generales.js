@@ -69,46 +69,59 @@ $(document).on("click", ".btnBanear", function() {
 =            ELIMINAR USUARIO            =
 ========================================*/
 
-$(document).on("click", ".btnEliminarPasajero", function() {
+$(document).on("click", ".btnEliminarUsuario", function() {
 
     var email = $(this).attr("email");
 
     console.log("email", email);
 
-    $.ajax({
-        url: 'https://us-central1-clubspeedy-dev.cloudfunctions.net/api/userDeleteWeb/',
-        method: 'POST',
-        async: true,
-        accept: "application/json",
-        crossDomain: true,
-        dataType: 'json',
-        data: { email: email }
-    }).done(function(ok) {
-        swal({
-            title: '¿Está seguro de borrar el usuario?',
-            text: "¡Si no lo está puede cancelar la accíón!",
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            cancelButtonText: 'Cancelar',
-            confirmButtonText: 'Si, borrar usuario!'
-        }).then((result) => {
-            if (result.value) {
+    swal({
+        title: '¿Está seguro de borrar el usuario?',
+        text: "¡Si no lo está puede cancelar la accíón!",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Si, borrar usuario!'
+    }).then((result) => {
+        if (result.value) {
 
-                window.location = "usuarios-generales";
+        $.ajax({
+            url: 'https://us-central1-clubspeedy-dev.cloudfunctions.net/api/userDeleteWeb',
+            method: 'POST',
+            async: true,
+            accept: "application/json",
+            crossDomain: true,
+            dataType: 'json',
+            data: { email: email }
+        }).done(function(ok) {
+            console.log("ok", ok);
 
-            }
+            swal({
+                type: "success",
+                title: ok.message,
+                closeOnconfirm: false
+            })
+            // .then((result) => {
+            //     if (result.value) {
+            //         window.location "usuarios-generales"
+            //     }
+            // }
+        
+        
+        }).fail(function(error) {
+
+            swal({
+
+                type: "error",
+                title: error.responseJSON.message,
+                closeOnconfirm: false
+            })
+            console.log("error: ", error.responseJSON.message);
         })
-    }).fail(function(error) {
 
-        swal({
-
-            type: "error",
-            title: error.responseJSON.message,
-            closeOnconfirm: false
-        })
-        console.log("error: ", error.responseJSON.message);
+        }
     })
 
 });

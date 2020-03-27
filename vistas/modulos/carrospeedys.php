@@ -4,7 +4,7 @@
     
     <h1>
       
-      Administrar Carro Speedys
+      Ver Carro Speedys
     
     </h1>
 
@@ -46,8 +46,6 @@
            <th>Telefono</th>
            <th>Correo</th>
            <th>Saldo</th>
-           <th>Estado</th>
-           <th>Acciones</th>
 
          </tr> 
 
@@ -74,41 +72,7 @@
                 <td>'.$respuesta["usuarios"][$f]["identificacion"].'</td>
                 <td>'.$respuesta["usuarios"][$f]["telefono"].'</td>
                 <td>'.$respuesta["usuarios"][$f]["email"].'</td>
-                <td>$ '.number_format($respuesta["usuarios"][$f]["saldoMotoCarroSpeedy"],2).'</td>';
-
-                // if ($respuesta["usuarios"][$f]["CarroSpeedySolicitud"] == "PENDIENTE") {
-                  
-                // echo '<td><button class="btn btn-warning btn-xs btnActivar" identificacion="'.$respuesta["usuarios"][$f]["identificacion"].'" placa="'.$respuesta["usuarios"][$f]["placaMoto"].'" cedulaPropi="'.$respuesta["usuarios"][$f]["cedulaPropietario"].'" estadoUsuario="1" cambiarUsuario="true">Pendiente</button></td>';
-
-                // }else if ($respuesta["usuarios"][$f]["CarroSpeedySolicitud"] == "RESUELTA") {
-
-                   echo '<td><button class="btn btn-success btn-xs btnDesactivar" >Resuelta</button></td>';
-                // }else{
-
-                //    echo '<td><button class="btn btn-danger btn-xs btnActivar" identificacion="'.$respuesta["usuarios"][$f]["identificacion"].'" placa="'.$respuesta["usuarios"][$f]["placaMoto"].'" cedulaPropi="'.$respuesta["usuarios"][$f]["cedulaPropietario"].'" estadoUsuario="1" cambiarUsuario="true">Desaprobado</button></td>';
-
-                // }
-                      
-                echo '<td>
-
-                  <div class="btn-group">';
-
-                 if (isset($respuesta["usuarios"][$f]["placaMoto"])) {
-                  
-                    echo '<button class="btn btn-warning btnModalEditarCarroSpeedy" identificacion="'.$respuesta["usuarios"][$f]["identificacion"].'" nombres="'.$respuesta["usuarios"][$f]["nombres"].'" telefono="'.$respuesta["usuarios"][$f]["telefono"].'" email="'.$respuesta["usuarios"][$f]["email"].'" municipio="'.$respuesta["usuarios"][$f]["municipio"].'" password="'.$respuesta["usuarios"][$f]["password"].'" saldoMotoSpeedy="'.$respuesta["usuarios"][$f]["saldoMotoSpeedy"].'" placaMoto="'.$respuesta["usuarios"][$f]["placaMoto"].'" codigoLider="'.$respuesta["usuarios"][$f]["codigoLider"].'" codigoPasajero="'.$respuesta["usuarios"][$f]["codigoPasajero"].'" codigoTransportador="'.$respuesta["usuarios"][$f]["codigoTransportador"].'" codigo1="'.$respuesta["usuarios"][$f]["codigo1"].'" cambioUsuario="'.$respuesta["usuarios"][$f]["cambioUsuario"].'" habilitadoPasajero="'.$respuesta["usuarios"][$f]["habilitadoPasajero"].'" habilitadoLider="'.$respuesta["usuarios"][$f]["habilitadoLider"].'" saldoCarroSpeedy="'.$respuesta["usuarios"][$f]["saldoMotoCarroSpeedy"].'" placaCarro="'.$respuesta["usuarios"][$f]["placaCarro"].'" data-toggle="modal" data-target="#modalEditarCarroSpeedy"><i class="fa fa-pencil"></i></button>';
-
-                }else{
-
-                 echo '<button class="btn btn-warning btnModalEditarCarroSpeedy" identificacion="'.$respuesta["usuarios"][$f]["identificacion"].'" nombres="'.$respuesta["usuarios"][$f]["nombres"].'" telefono="'.$respuesta["usuarios"][$f]["telefono"].'" email="'.$respuesta["usuarios"][$f]["email"].'" municipio="'.$respuesta["usuarios"][$f]["municipio"].'" password="'.$respuesta["usuarios"][$f]["password"].'" saldoMotoSpeedy="'.$respuesta["usuarios"][$f]["saldoMotoSpeedy"].'" codigoLider="'.$respuesta["usuarios"][$f]["codigoLider"].'" codigoPasajero="'.$respuesta["usuarios"][$f]["codigoPasajero"].'" codigoTransportador="'.$respuesta["usuarios"][$f]["codigoTransportador"].'" codigo1="'.$respuesta["usuarios"][$f]["codigo1"].'" cambioUsuario="'.$respuesta["usuarios"][$f]["cambioUsuario"].'" habilitadoPasajero="'.$respuesta["usuarios"][$f]["habilitadoPasajero"].'" habilitadoLider="'.$respuesta["usuarios"][$f]["habilitadoLider"].'" saldoCarroSpeedy="'.$respuesta["usuarios"][$f]["saldoMotoCarroSpeedy"].'" data-toggle="modal" data-target="#modalEditarCarroSpeedy"><i class="fa fa-pencil"></i></button>';
-
-                }
-                      
-                
-
-                    echo
-                    '<button class="btn btn-danger"  identificacion="'.$respuesta["usuarios"][$f]["identificacion"].'"><i class="fa fa-times"></i></button>
-
-                  </div>  
+                <td>$ '.number_format($respuesta["usuarios"][$f]["saldoMotoCarroSpeedy"],2).'</td> 
 
                 </td>
 

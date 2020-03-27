@@ -87,7 +87,7 @@
 
                       <button class="btn btn-warning btnModalEditarLider" identificacion="'.$respuesta["usuarios"][$f]["identificacion"].'" nombres="'.$respuesta["usuarios"][$f]["nombres"].'" telefono="'.$respuesta["usuarios"][$f]["telefono"].'" email="'.$respuesta["usuarios"][$f]["email"].'" municipio="'.$respuesta["usuarios"][$f]["municipio"].'" password="'.$respuesta["usuarios"][$f]["password"].'" data-toggle="modal" data-target="#modalEditarLider"><i class="fa fa-pencil"></i></button>
 
-                      <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                      <button class="btn btn-danger btnEliminarUsuario" email="'.$respuesta["usuarios"][$f]["email"].'"><i class="fa fa-times"></i></button>
 
                     </div>  
 
