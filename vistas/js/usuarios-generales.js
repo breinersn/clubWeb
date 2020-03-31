@@ -148,7 +148,6 @@ function guardarUsuarioGeneral() {
 
     $.ajax({
         url: 'https://us-central1-clubspeedy-dev.cloudfunctions.net/api/createUsers',
-        //url: 'https://us-central1-mototaxi-e3065.cloudfunctions.net/api/userRegister',
         method: 'POST',
         async: true,
         accept: "application/json",
@@ -394,7 +393,7 @@ $(".tablas").on("click", ".btnModalEditarPasajero", function() {
             swal({
 
                 type: "error",
-                title: error.responseJSON.message,
+                title: ok.message,
                 closeOnconfirm: false
             })
             console.log("error: ", ok);

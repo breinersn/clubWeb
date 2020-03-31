@@ -474,7 +474,7 @@ MODAL EDITAR Pasajero
                 
                   <span class="input-group-addon"><i class="fa fa-code"></i></span> 
 
-                  <input type="text" class="form-control input" name="editarPlacaMotoSpeedy" id="editarPlacaMotoSpeedy" placeholder="Placa Moto">
+                  <input type="text" class="form-control input" name="editarPlacaMotoSpeedy" id="editarPlacaMotoSpeedy" placeholder="Placa Moto" required>
 
                 </div>
 
