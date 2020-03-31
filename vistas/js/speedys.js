@@ -226,6 +226,7 @@ $(".tablas").on("click", ".btnModalEditarTransportador", function() {
 
         if (document.getElementById("editarMoto").checked == true) {
             var habilitadoMotoSpeedy = true;
+            document.getElementById('editarPlacaMotoSpeedy').className=':required';
         } else {
             var habilitadoMotoSpeedy = false;
             placaMoto = "";
