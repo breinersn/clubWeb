@@ -1,3 +1,4 @@
 ﻿# club-speedy-web-dev
  
-# Proyecto escrito en php para gestion de usuarios administradores
+# Gestion de usuarios administradores 
+# CRUD de usuario administrador, motospeedy y carrospeedy
